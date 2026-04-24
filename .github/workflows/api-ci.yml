@@ -13,7 +13,7 @@ defaults:
     working-directory: ./api
 
 jobs:
-  unit-test:
+  linter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,9 +27,9 @@ jobs:
       - name: install
         shell: bash
         run: npm ci
-      - name: run unit test
+      - name: run linter
         shell: bash
-        run: npm run test
+        run: npm run lint
   e2e:
     runs-on: ubuntu-latest
     container:
@@ -55,4 +55,4 @@ jobs:
         run: npm run test:e2e
         env:
           MONGO_DB_NAME: demo
-          MONGO_URL: mongodb://test:test123@localhost:27017?retryWrites=true&writeConcern=majority
+          MONGO_URL: mongodb://test:test123@mongo-e2e:27017?retryWrites=true&writeConcern=majority
