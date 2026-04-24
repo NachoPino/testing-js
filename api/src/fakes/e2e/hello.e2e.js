@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-const createApp = require('../src/app');
+const createApp = require('../src/app.js');
 
 describe('Test for hello endpoint', () => {
   let app = null;
