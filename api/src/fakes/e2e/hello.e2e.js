@@ -1,7 +1,8 @@
-//const createApp = require('../src/app');
-import app from '../src/app.js';
+ const request = require('supertest');
 
-const request = require('supertest');
+ import app from '../src/app.js';
+
+ //const createApp = require('../src/app.js');
 
 describe('Test for hello endpoint', () => {
   let app = null;
