@@ -2,8 +2,6 @@
 
  import app from '../src/app.js';
 
- //const createApp = require('../src/app.js');
-
 describe('Test for hello endpoint', () => {
   let app = null;
   let server = null;
